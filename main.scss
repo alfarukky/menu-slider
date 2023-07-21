@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i");
+
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+
+$color-secondary: #fff;
+
+$color-grey-light-1: #f9f7f6;
+$color-btn: #101d2c;
+
+$color-grey-dark-1: #54483a;
+$animation-duration: 1.2s;
+
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1.6;
+  transition: transform 0.3s ease;
+  &.show-nav {
+    transform: translateX(20rem);
+  }
+}
+
+.navigation {
+  background-color: $color-primary-dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100vh;
+  z-index: 10rem;
+  transform: translateX(-100%);
+
+  &__logo {
+    text-align: center;
+  }
+  padding: 2rem 0;
+  &__img {
+    width: 10rem;
+    height: 9rem;
+    border-radius: 50%;
+  }
+  &__list {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+  &__item {
+    text-transform: uppercase;
+    border-top: 2px solid rgba($color-grey-light-1, 0.1);
+    padding: 2rem;
+  }
+
+  &__item:last-child {
+    border-bottom: 2px solid rgba($color-grey-light-1, 0.1);
+  }
+  &__link {
+    text-decoration: none;
+    color: $color-secondary;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+}
+.header {
+  background-color: $color-primary;
+  text-align: center;
+  padding: 7rem 2rem;
+  &__paragraph {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    color: $color-grey-light-1;
+  }
+}
+
+.section {
+  padding: 2rem;
+  margin: 0 auto;
+  width: 80rem;
+  max-width: 100%;
+  &__text {
+    padding: 1rem;
+  }
+  &__list {
+    padding-left: 5rem;
+  }
+}
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &.show-modal {
+    display: block;
+  }
+}
+
+.form {
+  &__group {
+    padding: 0.5rem;
+  }
+  &__input {
+    width: 90%;
+    display: block;
+    padding: 0.8rem 1rem;
+    border: 1px solid $color-grey-dark-1;
+    border-radius: 2px;
+  }
+  &__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border: 2px solid $color-primary-dark;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__label {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+  }
+  &__btn {
+    margin-left: 2rem;
+    margin-top: -1rem;
+  }
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  animation-name: modalOpen;
+  animation-duration: $animation-duration;
+
+  &__btn {
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    top: 0;
+    right: 0;
+    border: none;
+    font-size: 2.5rem;
+    height: 4rem;
+    width: 4rem;
+    color: $color-secondary;
+  }
+  &__header {
+    background-color: $color-primary;
+    color: $color-secondary;
+    font-size: 1.8rem;
+    padding: 0.7rem;
+  }
+  &__content {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+}
+.header-1 {
+  font-size: 4rem;
+  color: $color-grey-light-1;
+}
+
+.nav-btn {
+  background-color: $color-secondary;
+  color: $color-primary;
+  cursor: pointer;
+  width: 4rem;
+  padding: 5px;
+  height: 4rem;
+  border: none;
+  border-radius: 3px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.header-2,
+.header-1 {
+  font-family: $font-display;
+  line-height: 1;
+}
+
+.header-2 {
+  font-size: 2.4rem;
+}
+
+.u-margin {
+  margin-bottom: 1rem;
+}
+.btn {
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: center;
+  white-space: nowrap;
+  color: $color-secondary;
+  background-color: $color-btn;
+}
+.btn:hover {
+  background: #19375e;
+}
+.cta-btn {
+  text-transform: uppercase;
+  border-radius: 40px;
+  padding: 1.5rem 4rem;
+}
+.form-btn {
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+}
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

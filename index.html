@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>menu &mdash; slider</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigation__logo">
+        <img
+          class="navigation__img"
+          src="https://randomuser.me/api/portraits/men/49.jpg"
+          alt="user"
+        />
+      </div>
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Home</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Portfolio</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Blog</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Contact me</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <button class="nav-btn" id="nav-toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+      <h1 class="header-1 u-margin">My Landing Page</h1>
+      <p class="header__paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ad.
+      </p>
+      <button class="btn cta-btn" id="open-modal">Sign up</button>
+    </header>
+    <main>
+      <div class="section">
+        <h2 class="header-2 u-margin">What is this landing page about?</h2>
+        <p class="section__text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos magnam
+          voluptate excepturi temporibus libero? Debitis sed maxime dolor
+          voluptatibus eum sum dolor sit amet consectetur, adipisicing elit. Eos
+          magnam voluptate excepturi temporibus libero? Debitis sed
+        </p>
+        <h2 class="header-2 u-margin">Tell me more?</h2>
+        <p class="section__text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+          consectetur quaerat quidem facere id alias harum odio ea minus
+          temporibus voluptate excepturi temporibus libero? Debitis sed maxime
+        </p>
+        <h2 class="header-2 u-margin">Benefits</h2>
+        <ul class="section__list">
+          <li class="section__items">Lifetime Access</li>
+          <li class="section__items">30 Day money Back</li>
+          <li class="section__items">Tailored Customer Support</li>
+        </ul>
+        <p class="section__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minus
+          voluptatum odio nemo, cupiditate facilis necessitatibus alias minima
+          aut ea, cum cumque ducimus. Nisi voluptatem earum accusantium officiis
+          vero distinctio rerum aliquam eos excepturi beatae dolor voluptatibus
+          eum sum dolor sit amet consectetur, adipisicing elit. Eos magnam
+          voluptate excepturi temporibus libero? Debitis sed
+        </p>
+      </div>
+      <div class="modal-container" id="modal">
+        <div class="modal">
+          <button class="modal__btn" id="close-modal">
+            <i class="fa fa-times"></i>
+          </button>
+          <div class="modal__header"><h3>Sign up</h3></div>
+          <div class="modal__content">
+            <p>Register with us to get offers, support and more</p>
+          </div>
+          <form class="form">
+            <div class="form__group">
+              <input
+                type="text"
+                id="name"
+                class="form__input"
+                placeholder="Name"
+              />
+              <label for="name" class="form__label">Name</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="email"
+                id="email"
+                class="form__input"
+                placeholder="Email"
+              />
+              <label for="email" class="form__label">Email</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="password"
+                id="password"
+                class="form__input"
+                placeholder="Password"
+              />
+              <label for="password" class="form__label">Password</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="password"
+                id="password2"
+                class="form__input"
+                placeholder="Confirm Password"
+              />
+              <label for="password2" class="form__label"
+                >Confirm Password</label
+              >
+            </div>
+            <div class="form__btn">
+              <input class="btn form-btn" type="button" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
