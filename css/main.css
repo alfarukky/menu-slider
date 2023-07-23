@@ -31,6 +31,7 @@ body.show-nav {
   width: 20rem;
   height: 100vh;
   z-index: 10rem;
+  border-right: 2px solid rgba(249, 247, 246, 0.2);
   transform: translateX(-100%);
   padding: 2rem 0;
 }
@@ -140,6 +141,7 @@ body.show-nav {
   overflow: hidden;
   top: 50%;
   left: 50%;
+  border: 2px solid #f9f7f6;
   transform: translate(-50%, -50%);
   max-width: 100%;
   width: 400px;
