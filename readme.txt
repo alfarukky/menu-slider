@@ -17,7 +17,7 @@ Simple landing page with sliding menu and modal
 
 ### Links
 
-- Solution URL: []
+- Solution URL: [https://bit.ly/menu_slider]
 
 ### Built with
 
